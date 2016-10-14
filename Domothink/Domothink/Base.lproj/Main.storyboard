@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="LoginViewController" customModule="Domothink" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="LoginView" customModule="Domothink">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CV6-6p-M5p">
+                                <rect key="frame" x="16" y="292" width="288" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcU-of-Lwg">
+                                <rect key="frame" x="16" y="342" width="288" height="34"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.070588235289999995" green="0.52941176469999995" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                <state key="normal" title="Se connecter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="connectBtnPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="afO-dn-bLg"/>
+                                    <segue destination="CDL-PC-Djg" kind="showDetail" id="1XE-WT-eQ1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mot de passe :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbz-On-0Nc">
+                                <rect key="frame" x="16" y="263" width="288" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEp-dw-MTJ">
+                                <rect key="frame" x="16" y="196" width="288" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzE-A0-7im">
+                                <rect key="frame" x="16" y="393" width="288" height="34"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.070588235289999995" green="0.52941176469999995" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                <state key="normal" title="S'inscrire">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="rD2-bv-vxH" kind="show" id="AoO-Sw-dzq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHf-e3-5rG">
+                                <rect key="frame" x="16" y="435" width="288" height="32"/>
+                                <animations/>
+                                <state key="normal" title="Mot de passe oublié ?">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Lg6-bf-1Oo" kind="show" id="7c9-is-Gtn"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoDomo" translatesAutoresizingMaskIntoConstraints="NO" id="14I-ms-UZ1">
+                                <rect key="frame" x="40" y="28" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zkd-Qn-4GL">
+                                <rect key="frame" x="16" y="225" width="288" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="14I-ms-UZ1" secondAttribute="trailing" constant="24" id="2TP-O1-HCg"/>
+                            <constraint firstItem="CV6-6p-M5p" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="593-oA-moG"/>
+                            <constraint firstItem="CcU-of-Lwg" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="5N7-ZK-eJt"/>
+                            <constraint firstItem="qzE-A0-7im" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="5Y0-PJ-zuc"/>
+                            <constraint firstItem="Pbz-On-0Nc" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="9Ja-Uh-6Zm"/>
+                            <constraint firstItem="CcU-of-Lwg" firstAttribute="top" secondItem="CV6-6p-M5p" secondAttribute="bottom" constant="20" id="AGk-HD-BO3"/>
+                            <constraint firstItem="oHf-e3-5rG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ER3-Ex-BIP"/>
+                            <constraint firstItem="oHf-e3-5rG" firstAttribute="top" secondItem="qzE-A0-7im" secondAttribute="bottom" constant="8" id="Ida-U4-GCR"/>
+                            <constraint firstItem="CV6-6p-M5p" firstAttribute="top" secondItem="Pbz-On-0Nc" secondAttribute="bottom" constant="8" id="JC5-VW-JIv"/>
+                            <constraint firstItem="oHf-e3-5rG" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Jxc-jC-WBJ"/>
+                            <constraint firstItem="ZEp-dw-MTJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Ka3-e9-oKc"/>
+                            <constraint firstItem="qzE-A0-7im" firstAttribute="top" secondItem="CcU-of-Lwg" secondAttribute="bottom" constant="17" id="LP8-1W-8Em"/>
+                            <constraint firstItem="Pbz-On-0Nc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="PQT-uO-gfE"/>
+                            <constraint firstItem="Pbz-On-0Nc" firstAttribute="top" secondItem="Zkd-Qn-4GL" secondAttribute="bottom" constant="8" id="PcG-Xo-anB"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="14I-ms-UZ1" secondAttribute="bottom" constant="324" id="R6L-ee-s9Q"/>
+                            <constraint firstItem="ZEp-dw-MTJ" firstAttribute="top" secondItem="14I-ms-UZ1" secondAttribute="bottom" constant="40" id="VIY-mG-SzW"/>
+                            <constraint firstItem="CV6-6p-M5p" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="YMY-ei-6GO"/>
+                            <constraint firstItem="ZEp-dw-MTJ" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Z2Z-B1-vXT"/>
+                            <constraint firstItem="14I-ms-UZ1" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="28" id="dSt-lB-GZO"/>
+                            <constraint firstItem="Zkd-Qn-4GL" firstAttribute="top" secondItem="ZEp-dw-MTJ" secondAttribute="bottom" constant="8" id="e1a-OO-N56"/>
+                            <constraint firstItem="qzE-A0-7im" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="huS-az-8QP"/>
+                            <constraint firstItem="Zkd-Qn-4GL" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ike-Db-LWZ"/>
+                            <constraint firstItem="Zkd-Qn-4GL" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="pe6-8A-Lwo"/>
+                            <constraint firstItem="14I-ms-UZ1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="24" id="rDX-n0-ft3"/>
+                            <constraint firstItem="CcU-of-Lwg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="uOn-TS-ewp"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="connectBtn" destination="CcU-of-Lwg" id="Qle-8e-Ar2"/>
+                            <outlet property="forgetPassBtn" destination="oHf-e3-5rG" id="juc-qo-TBg"/>
+                            <outlet property="loginField" destination="Zkd-Qn-4GL" id="8Yh-Co-FDS"/>
+                            <outlet property="passField" destination="CV6-6p-M5p" id="U2j-46-dDL"/>
+                            <outlet property="registerBtn" destination="qzE-A0-7im" id="Ja3-81-I2s"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-581" y="1215"/>
+        </scene>
+        <!--Reveal View Controller-->
+        <scene sceneID="OJs-n9-McY">
+            <objects>
+                <viewController id="CDL-PC-Djg" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ynX-kh-JVD"/>
+                        <viewControllerLayoutGuide type="bottom" id="gi3-gc-i4B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nVM-pC-8Xn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <segue destination="uQx-pU-NEq" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="6fd-Lr-qit"/>
+                        <segue destination="bWy-IZ-uhH" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="ZYv-64-BdO"/>
+                        <segue destination="Ctg-EY-A0F" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="ebm-uE-jKK"/>
+                        <segue destination="Yvh-JT-QOt" kind="custom" identifier="" customClass="SWRevealViewControllerSegueSetController" id="rle-Ka-sNi"/>
+                        <segue destination="EMz-pR-Kjn" kind="custom" identifier="" customClass="SWRevealViewControllerSegueSetController" id="nj1-Hh-7QY"/>
+                        <segue destination="N5s-1w-YCd" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="xun-oW-DgS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0IS-Rv-V2N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-149" y="1215"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="oGc-zr-DRB">
+            <objects>
+                <tableViewController id="uQx-pU-NEq" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="nnW-fb-xiR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection headerTitle="Menu" id="I4K-Rg-5xu">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="lBv-6d-gHr">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lBv-6d-gHr" id="b7n-Db-6MZ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Devices" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSC-R9-gb5">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="WSC-R9-gb5" firstAttribute="trailing" secondItem="b7n-Db-6MZ" secondAttribute="trailingMargin" id="1p3-Fh-osS"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="WSC-R9-gb5" secondAttribute="bottom" id="BwF-mc-MRd"/>
+                                                <constraint firstItem="WSC-R9-gb5" firstAttribute="top" secondItem="b7n-Db-6MZ" secondAttribute="topMargin" id="IfS-j1-eRw"/>
+                                                <constraint firstItem="WSC-R9-gb5" firstAttribute="leading" secondItem="b7n-Db-6MZ" secondAttribute="leadingMargin" id="wTX-DS-gV2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <segue destination="bWy-IZ-uhH" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="IWo-ps-AwO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="f33-bO-6U6">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f33-bO-6U6" id="Dzj-Fg-cJ4">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directives" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iew-wM-liR">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="iew-wM-liR" secondAttribute="bottom" id="Fg3-qA-Tcr"/>
+                                                <constraint firstItem="iew-wM-liR" firstAttribute="leading" secondItem="Dzj-Fg-cJ4" secondAttribute="leadingMargin" id="Wlc-RL-AWU"/>
+                                                <constraint firstItem="iew-wM-liR" firstAttribute="trailing" secondItem="Dzj-Fg-cJ4" secondAttribute="trailingMargin" id="mGT-bP-8pO"/>
+                                                <constraint firstItem="iew-wM-liR" firstAttribute="top" secondItem="Dzj-Fg-cJ4" secondAttribute="topMargin" id="tWR-OS-xmP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <segue destination="Ctg-EY-A0F" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="VkS-9j-Rco"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ae9-FM-cRI">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ae9-FM-cRI" id="1Aa-zh-8n7">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plugins" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PkR-Ct-jiX">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="PkR-Ct-jiX" firstAttribute="trailing" secondItem="1Aa-zh-8n7" secondAttribute="trailingMargin" id="1EV-jy-SwZ"/>
+                                                <constraint firstItem="PkR-Ct-jiX" firstAttribute="top" secondItem="1Aa-zh-8n7" secondAttribute="topMargin" id="YDB-sh-PpN"/>
+                                                <constraint firstItem="PkR-Ct-jiX" firstAttribute="leading" secondItem="1Aa-zh-8n7" secondAttribute="leadingMargin" id="sPc-xM-82J"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="PkR-Ct-jiX" secondAttribute="bottom" id="wFt-Tf-bAq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <segue destination="Yvh-JT-QOt" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="hXL-U4-xvs"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1uh-L7-mtj">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1uh-L7-mtj" id="e7Y-uL-hcf">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2d9-Gn-v4k">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="2d9-Gn-v4k" firstAttribute="trailing" secondItem="e7Y-uL-hcf" secondAttribute="trailingMargin" id="2nt-Ng-84m"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="2d9-Gn-v4k" secondAttribute="bottom" id="DsZ-k1-tMq"/>
+                                                <constraint firstItem="2d9-Gn-v4k" firstAttribute="leading" secondItem="e7Y-uL-hcf" secondAttribute="leadingMargin" id="SLK-NK-DL9"/>
+                                                <constraint firstItem="2d9-Gn-v4k" firstAttribute="top" secondItem="e7Y-uL-hcf" secondAttribute="topMargin" id="vnV-UP-vjI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <segue destination="EMz-pR-Kjn" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="uNf-Kq-fR1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jbL-Tb-6e8">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jbL-Tb-6e8" id="U5e-Ni-cuQ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0i-qt-cuf">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="c0i-qt-cuf" firstAttribute="trailing" secondItem="U5e-Ni-cuQ" secondAttribute="trailingMargin" id="3e9-x5-xpC"/>
+                                                <constraint firstItem="c0i-qt-cuf" firstAttribute="top" secondItem="U5e-Ni-cuQ" secondAttribute="topMargin" id="A6p-hX-c2e"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="c0i-qt-cuf" secondAttribute="bottom" id="HGo-yI-dOf"/>
+                                                <constraint firstItem="c0i-qt-cuf" firstAttribute="leading" secondItem="U5e-Ni-cuQ" secondAttribute="leadingMargin" id="n6i-vx-kkI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <segue destination="N5s-1w-YCd" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="tnR-SL-ki2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2hm-WQ-tj5">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2hm-WQ-tj5" id="Etz-MU-f0U">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Store" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weL-rp-KV5">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="weL-rp-KV5" firstAttribute="leading" secondItem="Etz-MU-f0U" secondAttribute="leadingMargin" id="0aR-B3-tGr"/>
+                                                <constraint firstItem="weL-rp-KV5" firstAttribute="trailing" secondItem="Etz-MU-f0U" secondAttribute="trailingMargin" id="BCf-ZT-34I"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="weL-rp-KV5" secondAttribute="bottom" id="uqg-cV-1U0"/>
+                                                <constraint firstItem="weL-rp-KV5" firstAttribute="top" secondItem="Etz-MU-f0U" secondAttribute="topMargin" id="z2D-ps-lpa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Action" id="uKt-lS-KZk">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vJX-f4-bWk">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vJX-f4-bWk" id="dC8-6f-9el">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9n-1N-cfq">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="B9n-1N-cfq" firstAttribute="trailing" secondItem="dC8-6f-9el" secondAttribute="trailingMargin" id="0mI-gp-2Kf"/>
+                                                <constraint firstItem="B9n-1N-cfq" firstAttribute="leading" secondItem="dC8-6f-9el" secondAttribute="leadingMargin" id="B1r-Vr-zwA"/>
+                                                <constraint firstItem="B9n-1N-cfq" firstAttribute="top" secondItem="dC8-6f-9el" secondAttribute="topMargin" id="iaG-ze-TrO"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="B9n-1N-cfq" secondAttribute="bottom" id="v0i-b7-vvK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="uQx-pU-NEq" id="7mV-QZ-oqo"/>
+                            <outlet property="delegate" destination="uQx-pU-NEq" id="9wX-2z-qyP"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ObA-bT-Fpv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="418" y="1229"/>
+        </scene>
+        <!--Plugin List View Controller-->
+        <scene sceneID="CWt-AH-YKb">
+            <objects>
+                <viewController id="Yvh-JT-QOt" customClass="PluginListViewController" customModule="Domothink" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0X0-C6-rXg"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kj7-AE-jdL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vCE-dv-gr7" customClass="PluginListView" customModule="Domothink" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NZ7-9X-FWz">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Plugins" id="EpU-hU-Oyr">
+                                        <barButtonItem key="leftBarButtonItem" image="MenuHam" id="Lpm-gQ-1PH">
+                                            <connections>
+                                                <action selector="menuBtnPressed:" destination="Yvh-JT-QOt" id="hGU-mm-Hu4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="NUT-Qo-27L">
+                                <rect key="frame" x="0.0" y="72" width="320" height="408"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="menuBtn" destination="Lpm-gQ-1PH" id="pab-Ga-Bup"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hia-uv-2Hk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717" y="513"/>
+        </scene>
+        <!--Update View Controller-->
+        <scene sceneID="zoV-xL-9fK">
+            <objects>
+                <viewController id="EMz-pR-Kjn" customClass="UpdateViewController" customModule="Domothink" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gAa-Lm-ql9"/>
+                        <viewControllerLayoutGuide type="bottom" id="yHO-bq-c1u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8fR-X9-iGn" customClass="UpdateView" customModule="Domothink" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nxI-z0-o5j">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Update" id="JTk-eA-hwC">
+                                        <barButtonItem key="leftBarButtonItem" image="MenuHam" id="HRW-wm-B2F">
+                                            <connections>
+                                                <action selector="menuBtnpressed:" destination="EMz-pR-Kjn" id="oba-Xc-Keb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="menuBtn" destination="HRW-wm-B2F" id="ceY-Fr-1vU"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qkB-Yn-xqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717" y="1061"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="u0d-hv-OOq">
+            <objects>
+                <viewController id="N5s-1w-YCd" customClass="SettingsViewController" customModule="Domothink" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M0k-U1-tZK"/>
+                        <viewControllerLayoutGuide type="bottom" id="h4o-QB-ILf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nMO-Bx-38C" customClass="SettingsView" customModule="Domothink" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9rl-Oa-qus">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Settings" id="e2H-Uw-ZTz">
+                                        <barButtonItem key="leftBarButtonItem" image="MenuHam" id="Dx5-v6-1ST">
+                                            <connections>
+                                                <action selector="menuBtnPressed:" destination="N5s-1w-YCd" id="nwB-MC-fDc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="menuBtn" destination="Dx5-v6-1ST" id="qjb-cq-p2N"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nu8-YQ-rUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717" y="1609"/>
+        </scene>
+        <!--Directive List View Controller-->
+        <scene sceneID="8DR-Fx-i7X">
+            <objects>
+                <viewController id="Ctg-EY-A0F" customClass="DirectiveListViewController" customModule="Domothink" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KgZ-TZ-UxQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cal-rO-IYP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9we-3E-rlb" customClass="DirectiveListView" customModule="Domothink" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B6c-BC-iGp">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Directives" id="lA6-5g-dTM">
+                                        <barButtonItem key="leftBarButtonItem" image="MenuHam" id="fPO-nc-0fc">
+                                            <connections>
+                                                <action selector="menuBtnPressed:" destination="Ctg-EY-A0F" id="YCs-xe-T9e"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="N65-Yg-6CG"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zIg-dZ-Uec">
+                                <rect key="frame" x="0.0" y="72" width="320" height="408"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="menuBtn" destination="fPO-nc-0fc" id="eXf-pA-jmR"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mgw-oQ-06N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717" y="-70"/>
+        </scene>
+        <!--Registration View Controller-->
+        <scene sceneID="5nw-PX-NyB">
+            <objects>
+                <viewController id="rD2-bv-vxH" customClass="RegistrationViewController" customModule="Domothink" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="um9-vA-Akq"/>
+                        <viewControllerLayoutGuide type="bottom" id="2LY-QU-4S5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ii9-Mz-eWA" customClass="RegistrationView" customModule="Domothink" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yYC-hZ-ONq">
+                                <rect key="frame" x="16" y="212" width="288" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qaU-xY-J8Z">
+                                <rect key="frame" x="16" y="133" width="288" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIP-5e-0yC">
+                                <rect key="frame" x="16" y="28" width="288" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password confirmation :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7WE-Tz-8Gb">
+                                <rect key="frame" x="16" y="183" width="288" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J17-pB-3U8">
+                                <rect key="frame" x="16" y="104" width="288" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Box number :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLL-iV-sdP">
+                                <rect key="frame" x="16" y="260" width="288" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Otl-6K-WIH">
+                                <rect key="frame" x="16" y="57" width="288" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13v-Kh-ILG">
+                                <rect key="frame" x="16" y="352" width="288" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.070588235289999995" green="0.52941176469999995" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                <state key="normal" title="S'inscrire">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bHC-EO-Seq">
+                                <rect key="frame" x="16" y="289" width="288" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eUb-Jo-lD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1015" y="1985"/>
+        </scene>
+        <!--Forgot Pass View Controller-->
+        <scene sceneID="yU4-FR-vEW">
+            <objects>
+                <viewController id="Lg6-bf-1Oo" customClass="ForgotPassViewController" customModule="Domothink" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="haD-gd-k1H"/>
+                        <viewControllerLayoutGuide type="bottom" id="gvy-my-5aC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zNq-Q5-8Ih" customClass="ForgotPassView" customModule="Domothink" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JlD-UZ-sxB">
+                                <rect key="frame" x="16" y="28" width="288" height="111"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Enter your Email adress in the field then click on the button "change your password", an email will be send on your email address with your new password.</string>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bIt-ko-Gpc">
+                                <rect key="frame" x="16" y="225" width="288" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFK-bN-mop">
+                                <rect key="frame" x="16" y="196" width="288" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2x-uO-Rcb">
+                                <rect key="frame" x="16" y="276" width="288" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.070588235289999995" green="0.52941176469999995" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                <state key="normal" title="Envoyer">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fDi-Mi-KV2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-255" y="1985"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5Zv-RT-OIP">
+            <objects>
+                <viewController id="Vrb-0n-fFb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UgH-QA-t9b"/>
+                        <viewControllerLayoutGuide type="bottom" id="bEO-8b-PQ1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dNf-Hf-X9z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiT-Ja-3vB">
+                                <rect key="frame" x="22" y="90" width="282" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DAg-G8-X5c">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Title" id="qnp-oP-Uui">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="sUd-b0-V9B"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="IW4-4K-zm0"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MTh-cW-jcT">
+                                <rect key="frame" x="22" y="119" width="282" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghd-dd-LEu">
+                                <rect key="frame" x="0.0" y="157" width="320" height="162"/>
+                                <animations/>
+                            </pickerView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xsd-c1-SBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2083" y="-70"/>
+        </scene>
+        <!--Device List View Controller-->
+        <scene sceneID="Duq-Pg-Qoy">
+            <objects>
+                <viewController id="bWy-IZ-uhH" customClass="DeviceListViewController" customModule="Domothink" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AkJ-JD-hXU"/>
+                        <viewControllerLayoutGuide type="bottom" id="cqQ-bq-MNe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wFM-nj-mIU" customClass="DeviceListView" customModule="Domothink" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W5B-V3-EEC">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Devices" id="jv1-gj-iBj">
+                                        <barButtonItem key="leftBarButtonItem" image="MenuHam" id="lv9-iD-XUg">
+                                            <connections>
+                                                <action selector="menuBtnPressed:" destination="bWy-IZ-uhH" id="u8f-Cs-ozE"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="muk-pe-qfX"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ueA-UP-bw4">
+                                <rect key="frame" x="0.0" y="72" width="320" height="408"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="menuBtn" destination="lv9-iD-XUg" id="JVA-1H-GNW"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4fM-Hb-sx7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717" y="-658"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LogoDomo" width="1849" height="1361"/>
+        <image name="MenuHam" width="14" height="15"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="rle-Ka-sNi"/>
+        <segue reference="ebm-uE-jKK"/>
+        <segue reference="ZYv-64-BdO"/>
+        <segue reference="nj1-Hh-7QY"/>
+        <segue reference="xun-oW-DgS"/>
+    </inferredMetricsTieBreakers>
+</document>
